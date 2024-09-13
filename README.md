@@ -15,45 +15,46 @@ git config --global user.email "your_email@example.com"
 ## Работа с репозиториями
 
 ```bash
-git init
-git clone [url]
+git init -- инициализации директории (папки как локального git репозитория)
+git clone [url] -- клонирования удаленного репозитория
 ```
 
 ## Основные операции с файлами
 
 ```bash
-git add [file]
-git status
-git commit -m "Сообщение коммита"
-git rm [file]
-git mv [old_filename] [new_filename]
+git status -- где ты, что ты
+git add [file] -- добавить изменения в файле/-ах
+git commit -m "Сообщение коммита" -- что изменил после добавления изменений
+git rm [file] -- удаления файла из наблюдаемых гитом
+git mv [old_filename] [new_filename] -- переименование / перемещение
 ```
 
 ## Работа с ветками
 
 ```bash
-git branch [branch-name]
-git checkout [branch-name]
-git merge [branch-name]
+git branch [branch-name] -- создание ветки на основании текущей без перехода на новую ветку
+git checkout [branch-name] -- переключение на ветку
+git checkout -b [branch-name] -- создание новой ветки с переключением на нее
+git merge [branch-name] -- выполняется находясь в ветке, в которую надо добавить изменения из другой ветки. Например из test в main. Тогда находясь в main запускаем git merge test
 ```
 
 ## Просмотр истории и изменений
 
 ```bash
-git log
-git diff
+git log -- все коммиты
+git diff -- изменения
 ```
 
 ## Синхронизация изменений
 
 ```bash
-git pull
-git push origin [branch-name]
+git pull -- забрать измменения из удаленного в локальный
+git push origin [branch-name] -- залить изменения из локального в удаленный
 ```
 
 ## Вспомогательные команды
 
 ```bash
-git stash
-git tag [tag-name]
+git stash -- временное сохранение изменений
+git tag [tag-name] -- тегирование коммитов
 ```
